@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather App</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Weather Forecast</h1>
+
+            <div class="select-wrapper">
+                <select id="city-select">
+                    <option value="" disabled selected hidden>
+                        Select a city
+                    </option>
+                    <option value="45.815399,15.966568">Zagreb</option>
+                    <option value="45.712490,16.075931">Velika Gorica</option>
+                    <option value="44.866623,13.848575">Pula</option>
+                </select>
+                <span class="custom-arrow"></span>
+            </div>
+
+            <button id="fetch-weather">Fetch Weather</button>
+            <div id="weather-result" class="weather-grid"></div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

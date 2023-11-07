@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #001b37;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    background-color: rgba(255, 88, 88, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+#city-select,
+#fetch-weather {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+#city-select {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-right: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#city-select option {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0;
+    border-color: white transparent transparent;
+}
+
+#city-select:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#fetch-weather {
+    background-color: #001b37;
+    color: white;
+    border: 1px solid #004499;
+}
+
+#fetch-weather:hover {
+    background-color: #00265f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#weather-result {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.weather-item {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.weather-item h2 {
+    margin: 10px 0;
+}
+
+.weather-item p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .weather-item p {
+        font-size: 0.9rem;
+    }
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
